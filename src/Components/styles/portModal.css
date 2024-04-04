@@ -18,3 +18,8 @@
     .attivo{
       background-color: red !important;
     }
+
+    .card{border: none !important;}
+    .card-img-overlay{
+      top: 95px !important;
+    }

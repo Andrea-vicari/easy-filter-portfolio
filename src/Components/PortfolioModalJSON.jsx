@@ -4,7 +4,7 @@ import portJSON from './json/food.json'
 
 
 
-function PortfolioModal() {
+function PortfolioModalJSON() {
 
 
     // Declare a fixed length excerpt
@@ -77,7 +77,7 @@ function PortfolioModal() {
                 }
                 // Otherwise set active the block whose cat is equal to whatclicked
                 else{
-                    allFilters[i].classList.remove('inactive')
+
                     allFilters[i].classList.add('active')
                   }
           }
@@ -130,7 +130,7 @@ function PortfolioModal() {
                     <div className="mx-auto">
                     {uniqueFilters.map((e)=>{
                     return(
-                        <button id={e} key={e} onClick={()=>filterSelection(e)} type="button" className="btn btn-outline-success mx-2 btnFilters mb-2">{e}</button>
+                        <button id={e} key={e} onClick={()=>filterSelection(e)} type="button" className={"btn btn-outline-success mx-2 btnFilters mb-2 " + e}>{e}</button>
                         )})}
                     </div>
                 </div>
@@ -142,13 +142,13 @@ function PortfolioModal() {
 
                     <div key={e.title} className={"col" + " " + e.category + " " + "port_block"}>
                         <div className="card shadow-sm">
-                            <img src={e.thumbImage}/>
+                            <img src={e.image}/>
                             <div className="card-body">
                                 <p className="card-text">{e.fixedLengthExcerpt}</p>
                                 <div className="d-flex justify-content-between align-items-center">
                                     <div className="btn-group">
                                         <button className="btn btn-outline-success p-1" onClick={()=>openModal(i)}>
-                                            <i className="fs-6 fa fa-search"></i> See Project
+                                            <i className="fs-6 fa fa-search"></i> See All
                                         </button>
                                     </div>
                                     <small className="text-primary fs-6">{e.category}</small>
@@ -165,9 +165,12 @@ function PortfolioModal() {
 
                                         </div>
                                         <div className="modal-body py-3 text-center">
-                                            <img src={e.thumbImage} className='img-fluid'></img>
-                                        <h5 className="mt-3 fw-bold">{e.description}</h5>
-                                        <a href={e.extLink} target='_blank' className='btn btn-lg btn-outline-dark mt-5'>See Live</a>
+                                            <img src={e.image} className='img-fluid'></img>
+                                            <h5 className="mt-3 fw-bold text-">CATEGORY: {e.category}</h5>
+                                            <h5 className="mt-3 fw-bold text-">PRICE: {e.price}</h5>
+                                            <h3 className="mt-3 fw-bold">{e.description}</h3>
+
+
                                         </div>
 
                                         <div className="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
@@ -193,4 +196,4 @@ function PortfolioModal() {
   )
 }
 
-export default PortfolioModal
+export default PortfolioModalJSON

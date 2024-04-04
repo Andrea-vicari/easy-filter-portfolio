@@ -1,5 +1,5 @@
 import React from 'react'
-import placeHolder from '../assets/images/port_web_mongo.jpg'
+import placeHolder from '../assets/images/port_JSON.jpg'
 import { Link } from 'react-router-dom'
 
 function Intro() {
@@ -25,8 +25,8 @@ function Intro() {
             <div className="card">
                 <img src={placeHolder}></img>
                 <div className="card-body">
-                    <h5 className="card-title">Modal Pop-up Version</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 className="card-title">Modal Pop-up JSON Version</h5>
+                    <p className="card-text">A filter portfolio component that fetches datas from a JSON file, get the categories from the Json and automatically generates the filter buttons</p>
                     <Link to="/bootstrapmodalpage" className="btn btn-warning">Go somewhere</Link>
                 </div>
             </div>
@@ -35,9 +35,9 @@ function Intro() {
             <div className="card">
                 <img src={placeHolder}></img>
                 <div className="card-body">
-                <h5 className="card-title">Hover Effect Version</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" className="btn btn-warning">Go somewhere</a>
+                <h5 className="card-title">Modal Pop-up API Version</h5>
+                    <p className="card-text">A filter portfolio component that fetches datas from a API file, get the categories from the Json and automatically generates the filter buttons</p>
+                    <Link to="/bootstrapmodalpageapi" className="btn btn-warning">Go somewhere</Link>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@ function Intro() {
             <div className="card">
                 <img src={placeHolder}></img>
                 <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">Hover Effect Version</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" className="btn btn-warning">Go somewhere</a>
                 </div>
